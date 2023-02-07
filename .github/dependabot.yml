@@ -7,8 +7,8 @@ updates:
       # Use Indian Standard Time (UTC +05:30)
       timezone: "Asia/Kolkata"
       time: "09:00"
-    allow: 
-    - dependency-type: "all"
+    allow:
+      - dependency-type: "all"
     # Always increase the version requirement to 
     # match the new version.
     versioning-strategy: increase
