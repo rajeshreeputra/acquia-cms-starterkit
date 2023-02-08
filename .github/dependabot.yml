@@ -4,14 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      # Use Indian Standard Time (UTC +05:30)
       timezone: "Asia/Kolkata"
       time: "09:00"
     allow:
       - dependency-type: "all"
-    # Always increase the version requirement to 
-    # match the new version.
-    versioning-strategy: increase
-    # Raise pull requests for version updates
-    # to pip against the `develop` branch
+    versioning-strategy: widen
     target-branch: "develop"
