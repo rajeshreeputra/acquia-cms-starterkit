@@ -54,11 +54,7 @@ jobs:
           ../orca/bin/ci/after_success.sh
           ../orca/bin/ci/after_failure.sh
           ../orca/bin/ci/after_script.sh
-      - name: Run coverage
-        if: matrix.coverage == 'xdebug'
-        run: composer coverage
   VERIFY_ACMS_STARTERKIT_ON_DRUPAL_PROJECT:
-    if: ${{ github.event_name == 'push' }}
     name: "Verify ${{ matrix.starter-kits }} with demo-content=${{ matrix.demo-content }}, content-model=${{ matrix.content-model }}, dam-integration=${{ matrix.dam-integration }}, core-version=${{ matrix.core-version }} on acquia/drupal-recommended-project"
     runs-on: ubuntu-latest
     env:
