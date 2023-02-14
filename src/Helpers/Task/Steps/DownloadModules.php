@@ -74,6 +74,7 @@ class DownloadModules {
         "true",
       ])->run();
     }
+    // Allow php-http/discovery plugin.
     $this->composerCommand->prepare([
       "config",
       "--no-plugins",
