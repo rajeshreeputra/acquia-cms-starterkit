@@ -74,6 +74,12 @@ class DownloadModules {
         "true",
       ])->run();
     }
+    $this->composerCommand->prepare([
+      "config",
+      "--no-plugins",
+      "allow-plugins.php-http/discovery",
+      "true",
+    ])->run();
     $packages = array_merge($args['modules']['require'], $args['themes']['require']);
     $packages = JsonParser::downloadPackages($packages);
     $inputArgument = array_merge(["require", "-W"], $packages);
